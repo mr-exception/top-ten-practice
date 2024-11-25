@@ -1,7 +1,11 @@
 import express from "express";
 
-const app = express();
+export const app = express();
 
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
   res.send({ ok: true });
+});
+
+app.listen(3000, () => {
+  console.log("service started");
 });
